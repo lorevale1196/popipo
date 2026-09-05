@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ruta de mi amor por ti 💖</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- PANTALLA DE INICIO (PORTADA) -->
+  <section id="inicio" class="pantalla-inicio">
+    <!-- Corazones pixelados flotantes de fondo -->
+    <div class="corazon-flotante c1"></div>
+    <div class="corazon-flotante c2"></div>
+    <div class="corazon-flotante c3"></div>
+    <div class="corazon-flotante c4"></div>
+    <div class="corazon-flotante c5"></div>
+    <div class="corazon-flotante c6"></div>
+
+    <div class="tarjeta-inicio">
+      <h1>Ruta de mi amor por ti 💖</h1>
+      <img src="assets/nosotros.jpg" alt="Nosotros dos" class="img-inicio">
+      <p>Elige por dónde quieres empezar nuestro viaje:</p>
+      
+      <div class="menu-principal">
+        <button onclick="cambiarSeccion('juego')">🎮 Juego Pixel</button>
+        <button onclick="cambiarSeccion('vales')">🎟️ Baúl de Vales</button>
+        <button onclick="cambiarSeccion('manga')">📖 Manga</button>
+        <button onclick="cambiarSeccion('mapa')">🗺️ Mapa del Tesoro</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- NAVEGACIÓN SUPERIOR -->
+  <header id="header-nav" class="hidden">
+    <nav>
+      <button onclick="cambiarSeccion('inicio')">🏠 Inicio</button>
+      <button onclick="cambiarSeccion('juego')">🎮 Juego</button>
+      <button onclick="cambiarSeccion('vales')">🎟️ Vales</button>
+      <button onclick="cambiarSeccion('manga')">📖 Manga</button>
+      <button onclick="cambiarSeccion('mapa')">🗺️ Mapa</button>
+    </nav>
+  </header>
+
+  <main id="contenido-principal" class="hidden">
+    <!-- SECCIÓN 1: JUEGO -->
+    <section id="juego" class="seccion">
+      <h2>¡Atrapa mis besos! 💋</h2>
+      <p>Presiona <strong>Espacio</strong>, <strong>Haz Clic</strong> o toca la pantalla para saltar.</p>
+      <canvas id="gameCanvas" width="800" height="350"></canvas>
+
+      <div style="display: none;">
+        <img id="imgMario" src="assets/mario-corriendo.jpg" alt="Mario">
+        <img id="imgTu" src="assets/tu.jpg" alt="Tú">
+        <img id="imgNovio" src="assets/novio.jpg" alt="Novio">
+      </div>
+    </section>
+
+    <!-- SECCIÓN 2: BAÚL DE VALES -->
+    <section id="vales" class="seccion">
+      <h2>Baúl de Vales 🎟️</h2>
+      <p>Haz clic en cualquier vale para descubrir tu sorpresa:</p>
+      <div class="contenedor-vales">
+        <div class="vale-card" onclick="this.classList.toggle('girada')">
+          <div class="cara frontal">🎁 Vale #1</div>
+          <div class="cara trasera">Válido por un día entero de películas, abrazos y tus papitas favoritas 🍿</div>
+        </div>
+        <div class="vale-card" onclick="this.classList.toggle('girada')">
+          <div class="cara frontal">🎁 Vale #2</div>
+          <div class="cara trasera">Válido por algo que tú quieras hacer y yo nunca haya probado ✨</div>
+        </div>
+        <div class="vale-card" onclick="this.classList.toggle('girada')">
+          <div class="cara frontal">🎁 Vale #3</div>
+          <div class="cara trasera">Válido por un masaje relajante de 20 minutos con música suave 💆‍♂️</div>
+        </div>
+        <div class="vale-card" onclick="this.classList.toggle('girada')">
+          <div class="cara frontal">🎁 Vale #4</div>
+          <div class="cara trasera">Válido para ganarme en un juego o elegir qué cenamos hoy 🍕</div>
+        </div>
+        <div class="vale-card" onclick="this.classList.toggle('girada')">
+          <div class="cara frontal">🎁 Vale #5</div>
+          <div class="cara trasera">Válido por un paseo tranquilo, helado y muchas fotitos juntos 🍦</div>
+        </div>
+
+        <div class="vale-card picosito" onclick="this.classList.toggle('girada')">
+          <div class="cara frontal">🔥 Vale #6</div>
+          <div class="cara trasera">Válido por un beso apasionado de 1 minuto sin interrupciones 💋</div>
+        </div>
+        <div class="vale-card picosito" onclick="this.classList.toggle('girada')">
+          <div class="cara frontal">🔥 Vale #7</div>
+          <div class="cara trasera">Válido por un masaje que empiece relajante y termine donde tú quieras 😈</div>
+        </div>
+        <div class="vale-card picosito" onclick="this.classList.toggle('girada')">
+          <div class="cara frontal">🔥 Vale #8</div>
+          <div class="cara trasera">Válido por una noche de juego de roles o usar una fantasía previa 🤫</div>
+        </div>
+        <div class="vale-card picosito" onclick="this.classList.toggle('girada')">
+          <div class="cara frontal">🔥 Vale #9</div>
+          <div class="cara trasera">Válido para exigirme un baile privado super coqueto 💃</div>
+        </div>
+        <div class="vale-card picosito" onclick="this.classList.toggle('girada')">
+          <div class="cara frontal">🔥 Vale #10</div>
+          <div class="cara trasera">Válido para un mañanero sin excusas el día que tú elijas 🌅</div>
+        </div>
+
+        <div class="vale-card" onclick="this.classList.toggle('girada')">
+          <div class="cara frontal">🎁 Vale #11</div>
+          <div class="cara trasera">Válido para perdonarte cualquier berrinche o tontería del día 💖</div>
+        </div>
+        <div class="vale-card picosito" onclick="this.classList.toggle('girada')">
+          <div class="cara frontal">🔥 Vale #12</div>
+          <div class="cara trasera">Válido por una ducha o baño juntos con velitas 🚿</div>
+        </div>
+        <div class="vale-card" onclick="this.classList.toggle('girada')">
+          <div class="cara frontal">🎁 Vale #13</div>
+          <div class="cara trasera">Válido por cocinarte tu platillo favorito cuando me digas 🍳</div>
+        </div>
+        <div class="vale-card picosito" onclick="this.classList.toggle('girada')">
+          <div class="cara frontal">🔥 Vale #14</div>
+          <div class="cara trasera">Válido para darme una orden ardiente que debo obedecer sí o sí 📜⚡</div>
+        </div>
+        <div class="vale-card picosito" onclick="this.classList.toggle('girada')">
+          <div class="cara frontal">🔥 Vale #15</div>
+          <div class="cara trasera">Válido por una noche donde la única regla es no dormir temprano 🔥</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 3: MANGA -->
+    <section id="manga" class="seccion">
+      <h2>Nuestra Historia 📖</h2>
+      <div class="visor-manga">
+        <img id="imagen-manga" src="assets/pagina1.jpg" alt="Página de manga">
+        <div class="controles-manga">
+          <button onclick="moverManga(-1)">⬅️ Anterior</button>
+          <button onclick="moverManga(1)">Siguiente ➡️</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 4: MAPA DEL TESORO -->
+    <section id="mapa" class="seccion">
+      <h2>Mapa del Tesoro 🗺️</h2>
+      <p>Toca o haz clic en los números del mapa para seguir nuestro camino de amor:</p>
+      
+      <div class="mapa-interactivo-contenedor">
+        <div class="marco-mapa">
+          <img src="assets/treasuremap.png" alt="Mapa del Tesoro" class="mapa-img">
+          
+          <button class="pin-mapa pin-1" onclick="abrirMensaje('📍 Junio\n\nHablamos porque fui al concierto de Morat y comenzamos a ligar. 🎶✨')">
+            <span class="pin-etiqueta">1</span>
+          </button>
+
+          <button class="pin-mapa pin-2" onclick="abrirMensaje('📍 8 de Julio\n\nNuestra primera vista (y cogida). 🔥❤️')">
+            <span class="pin-etiqueta">2</span>
+          </button>
+
+          <button class="pin-mapa pin-3" onclick="abrirMensaje('📍 Julio\n\nComenzaste a venir a mi casa de forma recurrente. 🏠💕')">
+            <span class="pin-etiqueta">3</span>
+          </button>
+
+          <button class="pin-mapa pin-4" onclick="abrirMensaje('📍 Agosto - Septiembre\n\nComencé a verte y a detallarte más. Nos veíamos, pero solo quería verte más y más... Comencé a verte de cerca y a pensar mucho en ti... 💭💖')">
+            <span class="pin-etiqueta">4</span>
+          </button>
+
+          <button class="pin-mapa pin-5" onclick="abrirMensaje('📍 Noviembre\n\nMi cumpleaños: no viniste, pero viniste al día siguiente y me hiciste muy feliz. Fue el primer cumpleaños en el que no lloré. 🎂🥹')">
+            <span class="pin-etiqueta">5</span>
+          </button>
+
+          <button class="pin-mapa pin-6" onclick="abrirMensaje('🏆 El Gran Tesoro\n\nAsumí que estaba enamorada de ti y que no te quería soltar más nunca <3 Te conté mis miedos, todo lo que pasé y amé absolutamente todo de ti. 💖👑')">
+            <span class="pin-etiqueta">6</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- MENSAJE ESPECIAL DEBAJO DEL MAPA -->
+      <div class="nota-final-mapa">
+        <p>Nuestra historia no ha terminado, pero te sigo queriendo desde el primer momento que te vi y no me arrepiento de nada... Quiero que esta historia continúe juntos, creciendo juntos &lt;3</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal Emergente -->
+  <div id="modal" class="modal hidden" onclick="cerrarMensaje()">
+    <div class="modal-contenido">
+      <p id="modal-texto"></p>
+      <button onclick="cerrarMensaje()" class="btn-cerrar">Cerrar ✨</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
