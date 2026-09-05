@@ -19,7 +19,7 @@ function cambiarSeccion(id) {
   if (seccionObjetivo) seccionObjetivo.classList.add('activa');
 }
 
-// 2. Lógica del Manga (Sin ruta assets/)
+// 2. Lógica del Manga (Apuntando directamente a la raíz)
 const paginasManga = [
   "pagina1.jpg",
   "pagina2.jpg",
