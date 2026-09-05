@@ -9,9 +9,7 @@
 </head>
 <body>
 
-  <!-- PANTALLA DE INICIO (PORTADA) -->
   <section id="inicio" class="pantalla-inicio">
-    <!-- Corazones pixelados flotantes de fondo -->
     <div class="corazon-flotante c1"></div>
     <div class="corazon-flotante c2"></div>
     <div class="corazon-flotante c3"></div>
@@ -21,7 +19,7 @@
 
     <div class="tarjeta-inicio">
       <h1>Ruta de mi amor por ti 💖</h1>
-      <img src="assets/nosotros.jpg" alt="Nosotros dos" class="img-inicio">
+      <img src="nosotros.jpg" alt="Nosotros dos" class="img-inicio">
       <p>Elige por dónde quieres empezar nuestro viaje:</p>
       
       <div class="menu-principal">
@@ -33,7 +31,6 @@
     </div>
   </section>
 
-  <!-- NAVEGACIÓN SUPERIOR -->
   <header id="header-nav" class="hidden">
     <nav>
       <button onclick="cambiarSeccion('inicio')">🏠 Inicio</button>
@@ -45,20 +42,18 @@
   </header>
 
   <main id="contenido-principal" class="hidden">
-    <!-- SECCIÓN 1: JUEGO -->
     <section id="juego" class="seccion">
       <h2>¡Atrapa mis besos! 💋</h2>
       <p>Presiona <strong>Espacio</strong>, <strong>Haz Clic</strong> o toca la pantalla para saltar.</p>
       <canvas id="gameCanvas" width="800" height="350"></canvas>
 
       <div style="display: none;">
-        <img id="imgMario" src="assets/mario-corriendo.jpg" alt="Mario">
-        <img id="imgTu" src="assets/tu.jpg" alt="Tú">
-        <img id="imgNovio" src="assets/novio.jpg" alt="Novio">
+        <img id="imgMario" src="mario-corriendo.jpg" alt="Mario">
+        <img id="imgTu" src="tu.jpg" alt="Tú">
+        <img id="imgNovio" src="novio.jpg" alt="Novio">
       </div>
     </section>
 
-    <!-- SECCIÓN 2: BAÚL DE VALES -->
     <section id="vales" class="seccion">
       <h2>Baúl de Vales 🎟️</h2>
       <p>Haz clic en cualquier vale para descubrir tu sorpresa:</p>
@@ -128,11 +123,10 @@
       </div>
     </section>
 
-    <!-- SECCIÓN 3: MANGA -->
     <section id="manga" class="seccion">
       <h2>Nuestra Historia 📖</h2>
       <div class="visor-manga">
-        <img id="imagen-manga" src="assets/pagina1.jpg" alt="Página de manga">
+        <img id="imagen-manga" src="pagina1.jpg" alt="Página de manga">
         <div class="controles-manga">
           <button onclick="moverManga(-1)">⬅️ Anterior</button>
           <button onclick="moverManga(1)">Siguiente ➡️</button>
@@ -140,14 +134,13 @@
       </div>
     </section>
 
-    <!-- SECCIÓN 4: MAPA DEL TESORO -->
     <section id="mapa" class="seccion">
       <h2>Mapa del Tesoro 🗺️</h2>
       <p>Toca o haz clic en los números del mapa para seguir nuestro camino de amor:</p>
       
       <div class="mapa-interactivo-contenedor">
         <div class="marco-mapa">
-          <img src="assets/treasuremap.png" alt="Mapa del Tesoro" class="mapa-img">
+          <img src="treasuremap.png" alt="Mapa del Tesoro" class="mapa-img">
           
           <button class="pin-mapa pin-1" onclick="abrirMensaje('📍 Junio\n\nHablamos porque fui al concierto de Morat y comenzamos a ligar. 🎶✨')">
             <span class="pin-etiqueta">1</span>
@@ -175,14 +168,12 @@
         </div>
       </div>
 
-      <!-- MENSAJE ESPECIAL DEBAJO DEL MAPA -->
       <div class="nota-final-mapa">
         <p>Nuestra historia no ha terminado, pero te sigo queriendo desde el primer momento que te vi y no me arrepiento de nada... Quiero que esta historia continúe juntos, creciendo juntos &lt;3</p>
       </div>
     </section>
   </main>
 
-  <!-- Modal Emergente -->
   <div id="modal" class="modal hidden" onclick="cerrarMensaje()">
     <div class="modal-contenido">
       <p id="modal-texto"></p>

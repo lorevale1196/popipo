@@ -19,12 +19,12 @@ function cambiarSeccion(id) {
   if (seccionObjetivo) seccionObjetivo.classList.add('activa');
 }
 
-// 2. Lógica del Manga (4 Páginas)
+// 2. Lógica del Manga (Sin ruta assets/)
 const paginasManga = [
-  "assets/pagina1.jpg",
-  "assets/pagina2.jpg",
-  "assets/pagina3.jpg",
-  "assets/pagina4.jpg"
+  "pagina1.jpg",
+  "pagina2.jpg",
+  "pagina3.jpg",
+  "pagina4.jpg"
 ];
 let paginaActual = 0;
 
